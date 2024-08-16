@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+    <style>
+        /* Make the entire page background black */
+        body {
+            background-color: black;
+            color: white; /* Set text color to white */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Set a clean font */
+            text-align: center; /* Center the text */
+        }
+
+        h1 {
+            margin: 0; /* Remove default margin from h1 */
+            font-size: 3rem; /* Adjust size for visibility */
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Smaller text size on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Digital Watch</h1> -->
+    <h1 id="demo"></h1>
+
+    <script>
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+            let d = new Date();
+            document.getElementById("demo").innerHTML=
+            d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+        }
+    </script>
+
+</body>
+</html>
